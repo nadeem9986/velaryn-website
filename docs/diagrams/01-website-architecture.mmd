@@ -1,0 +1,23 @@
+flowchart TD
+    visitor[Website Visitor]
+    browser[Browser]
+    dns[velaryn.in DNS]
+    vercel[Vercel Hosting]
+    app[Next.js Single-Page Website]
+    content[Structured Homepage Content]
+    assets[Optimized Visual Assets]
+    email[contact@velaryn.in]
+    analytics[Optional Privacy-Conscious Analytics]
+    futureApi[Future Serverless API]
+    futureDb[Future Database or CMS]
+
+    visitor --> browser
+    browser --> dns
+    dns --> vercel
+    vercel --> app
+    app --> content
+    app --> assets
+    app --> email
+    app -. optional .-> analytics
+    app -. future .-> futureApi
+    futureApi -. future .-> futureDb

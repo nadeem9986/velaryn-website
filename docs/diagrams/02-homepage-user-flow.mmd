@@ -1,0 +1,26 @@
+flowchart TD
+    start[Visitor lands on velaryn.in]
+    hero[Hero: Velaryn positioning]
+    explore{Visitor intent}
+    about[Learn who Velaryn is]
+    capabilities[Review capabilities and focus areas]
+    products[View products and initiatives]
+    rescue[Notice Rescue Call as in development]
+    tech[Review technology focus]
+    trust[Review industries, values, and roadmap]
+    founders[See founders]
+    faq[Read FAQ]
+    contact[Contact Velaryn]
+
+    start --> hero
+    hero --> explore
+    explore --> about
+    explore --> contact
+    about --> capabilities
+    capabilities --> products
+    products --> rescue
+    rescue --> tech
+    tech --> trust
+    trust --> founders
+    founders --> faq
+    faq --> contact

@@ -1,0 +1,19 @@
+flowchart LR
+    local[Local Development]
+    lint[Lint and Format]
+    build[Production Build]
+    repo[Source Repository]
+    vercel[Vercel Deployment]
+    dns[Domain DNS: velaryn.in]
+    https[HTTPS Verification]
+    live[Live Website]
+    qa[Post-Launch QA]
+
+    local --> lint
+    lint --> build
+    build --> repo
+    repo --> vercel
+    vercel --> dns
+    dns --> https
+    https --> live
+    live --> qa
