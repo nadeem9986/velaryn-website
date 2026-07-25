@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Velaryn | Building Intelligent Emergency & Healthcare Technology</title>
+  <title>Velaryn | Intelligent Emergency & Healthcare Technology</title>
   <meta name="description" content="Velaryn is an emerging technology company based in Bengaluru, building intelligent software for emergency response, healthcare coordination, and mission-critical operations.">
   <meta name="keywords" content="Velaryn, Rescue Call, Emergency Response, Healthcare Technology, Bengaluru Tech, Intelligent Systems, Public Safety">
   <meta name="author" content="Velaryn">
@@ -12,39 +12,38 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://velaryn.in/">
-  <meta property="og:title" content="Velaryn | Building Intelligent Emergency & Healthcare Technology">
+  <meta property="og:title" content="Velaryn | Intelligent Emergency & Healthcare Technology">
   <meta property="og:description" content="Intelligent software for emergency response, healthcare coordination, and mission-critical operations. Helping organizations make faster decisions when every second matters.">
   <meta property="og:image" content="https://velaryn.in/public/assets/brand/velaryn-field.svg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://velaryn.in/">
-  <meta property="twitter:title" content="Velaryn | Building Intelligent Emergency & Healthcare Technology">
+  <meta property="twitter:title" content="Velaryn | Intelligent Emergency & Healthcare Technology">
   <meta property="twitter:description" content="Intelligent software for emergency response, healthcare coordination, and mission-critical operations.">
   <meta property="twitter:image" content="https://velaryn.in/public/assets/brand/velaryn-field.svg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-primary: #030712;
-      --bg-secondary: #0B0F19;
-      --bg-card: rgba(17, 24, 39, 0.65);
-      --bg-card-hover: rgba(31, 41, 55, 0.85);
+      --bg-primary: #06080E;
+      --bg-secondary: #0C0F17;
+      --bg-card: rgba(15, 20, 32, 0.65);
+      --bg-card-hover: rgba(22, 30, 48, 0.85);
       --border-color: rgba(255, 255, 255, 0.08);
       --border-hover: rgba(59, 130, 246, 0.45);
-      --text-primary: #F9FAFB;
-      --text-secondary: #9CA3AF;
-      --text-muted: #6B7280;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
       --accent-blue: #3B82F6;
       --accent-blue-light: #60A5FA;
       --accent-cyan: #06B6D4;
       --accent-emerald: #10B981;
-      --accent-rose: #F43F5E;
-      --accent-glow: rgba(59, 130, 246, 0.22);
+      --accent-glow: rgba(59, 130, 246, 0.25);
       --card-radius: 20px;
       --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       --font-heading: 'Space Grotesk', -apple-system, sans-serif;
@@ -55,10 +54,10 @@
     [data-theme="light"] {
       --bg-primary: #F8FAFC;
       --bg-secondary: #F1F5F9;
-      --bg-card: rgba(255, 255, 255, 0.88);
+      --bg-card: rgba(255, 255, 255, 0.9);
       --bg-card-hover: rgba(255, 255, 255, 0.98);
-      --border-color: rgba(15, 23, 42, 0.12);
-      --border-hover: rgba(37, 99, 235, 0.5);
+      --border-color: rgba(15, 23, 42, 0.1);
+      --border-hover: rgba(37, 99, 235, 0.4);
       --text-primary: #0F172A;
       --text-secondary: #334155;
       --text-muted: #64748B;
@@ -66,7 +65,6 @@
       --accent-blue-light: #3B82F6;
       --accent-cyan: #0891B2;
       --accent-emerald: #059669;
-      --accent-rose: #E11D48;
       --accent-glow: rgba(37, 99, 235, 0.15);
     }
 
@@ -91,34 +89,34 @@
       min-height: 100vh;
     }
 
-    /* Grid Overlay Background Pattern */
-    .grid-pattern {
+    /* Ambient Spotlight & Grid Pattern */
+    .spotlight {
       position: fixed;
-      inset: 0;
-      background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
-      background-size: 32px 32px;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.6;
-      mask-image: radial-gradient(circle at 50% 40%, black 0%, transparent 80%);
-      -webkit-mask-image: radial-gradient(circle at 50% 40%, black 0%, transparent 80%);
-    }
-
-    /* Ambient Glow */
-    .aurora-glow {
-      position: fixed;
-      top: -15vh;
+      top: -20vh;
       left: 50%;
       transform: translateX(-50%);
-      width: 1000px;
-      height: 600px;
-      background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.18) 0%, rgba(6, 182, 212, 0.12) 40%, rgba(16, 185, 129, 0.05) 75%, transparent 100%);
-      filter: blur(100px);
+      width: 1200px;
+      height: 700px;
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(59, 130, 246, 0.22) 0%, rgba(6, 182, 212, 0.12) 45%, rgba(16, 185, 129, 0.03) 80%, transparent 100%);
+      filter: blur(120px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Interactive Canvas Background */
+    .grid-lines {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 75%);
+      -webkit-mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 75%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
     #hero-canvas {
       position: absolute;
       top: 0;
@@ -137,17 +135,17 @@
     }
 
     h1 {
-      font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+      font-size: clamp(2.8rem, 5.8vw, 5rem);
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.08;
       margin-bottom: 1.5rem;
     }
 
     h2 {
-      font-size: clamp(1.85rem, 4vw, 3rem);
+      font-size: clamp(2rem, 4vw, 3.25rem);
       font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+      line-height: 1.18;
+      margin-bottom: 1.25rem;
     }
 
     h3 {
@@ -159,11 +157,22 @@
     p {
       color: var(--text-secondary);
       font-size: 1.05rem;
-      font-weight: 400;
     }
 
-    .gradient-text-emergency {
-      background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 50%, #10B981 100%);
+    .text-gradient {
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    [data-theme="light"] .text-gradient {
+      background: linear-gradient(180deg, #0F172A 0%, #334155 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-accent {
+      background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #34D399 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -171,27 +180,27 @@
     .section-label {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
       font-family: var(--font-mono);
       font-size: 0.8rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       color: var(--accent-cyan);
-      background: rgba(6, 182, 212, 0.1);
-      border: 1px solid rgba(6, 182, 212, 0.28);
-      padding: 0.4rem 0.9rem;
+      background: rgba(6, 182, 212, 0.08);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      padding: 0.45rem 1rem;
       border-radius: 999px;
-      margin-bottom: 1.25rem;
-      backdrop-filter: blur(8px);
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
     }
 
-    .section-label-icon {
-      width: 6px;
-      height: 6px;
+    .section-label-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--accent-cyan);
-      box-shadow: 0 0 8px var(--accent-cyan);
+      box-shadow: 0 0 10px var(--accent-cyan);
     }
 
     /* Layout Containers */
@@ -204,45 +213,38 @@
     }
 
     .section {
-      padding: 7rem 0;
+      padding: 8rem 0;
       position: relative;
     }
 
-    .section-divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-    }
-
     .section-header {
-      max-width: 760px;
-      margin: 0 auto 4rem auto;
+      max-width: 780px;
+      margin: 0 auto 4.5rem auto;
       text-align: center;
     }
 
-    /* Site Header Navigation */
+    /* Header & Navigation */
     .site-header {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 3rem);
+      max-width: 1140px;
       z-index: 100;
-      padding: 1.25rem 0;
-      transition: var(--transition);
-    }
-
-    .site-header.scrolled {
-      background: rgba(3, 7, 18, 0.88);
+      padding: 0.75rem 1.25rem;
+      background: rgba(12, 15, 23, 0.75);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-color);
-      padding: 0.85rem 0;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      transition: var(--transition);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
-    [data-theme="light"] .site-header.scrolled {
-      background: rgba(248, 250, 252, 0.9);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    [data-theme="light"] .site-header {
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     }
 
     .nav-wrapper {
@@ -254,38 +256,29 @@
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 0.75rem;
       text-decoration: none;
       color: var(--text-primary);
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       letter-spacing: -0.03em;
     }
 
     .brand-icon {
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
       background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-      border-radius: 12px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .brand-icon::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.4) 100%);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
     }
 
     .nav-links {
       display: flex;
-      gap: 2.25rem;
+      gap: 2rem;
       list-style: none;
     }
 
@@ -295,33 +288,16 @@
       font-size: 0.95rem;
       font-weight: 500;
       transition: var(--transition);
-      position: relative;
     }
 
     .nav-links a:hover {
       color: var(--text-primary);
     }
 
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
-      transition: var(--transition);
-      border-radius: 2px;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.85rem;
     }
 
     /* Buttons */
@@ -331,7 +307,7 @@
       justify-content: center;
       gap: 0.65rem;
       padding: 0.8rem 1.6rem;
-      border-radius: 12px;
+      border-radius: 999px;
       font-size: 0.95rem;
       font-weight: 600;
       text-decoration: none;
@@ -345,8 +321,6 @@
       background: linear-gradient(135deg, var(--accent-blue), #1D4ED8);
       color: #FFFFFF;
       box-shadow: 0 4px 25px var(--accent-glow);
-      position: relative;
-      overflow: hidden;
     }
 
     .btn-primary:hover {
@@ -359,7 +333,6 @@
       color: var(--text-primary);
       border: 1px solid var(--border-color);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
     }
 
     .btn-secondary:hover {
@@ -371,9 +344,9 @@
     .theme-toggle {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       color: var(--text-primary);
       display: flex;
       align-items: center;
@@ -391,9 +364,9 @@
       display: none;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       color: var(--text-primary);
       align-items: center;
       justify-content: center;
@@ -404,13 +377,13 @@
     .mobile-nav-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(3, 7, 18, 0.96);
+      background: rgba(6, 8, 14, 0.96);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       z-index: 200;
       display: flex;
       flex-direction: column;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
       opacity: 0;
       pointer-events: none;
       transition: var(--transition);
@@ -429,21 +402,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     .mobile-nav-links {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.75rem;
       list-style: none;
-      margin-bottom: 3rem;
     }
 
     .mobile-nav-links a {
       color: var(--text-primary);
       font-family: var(--font-heading);
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: 600;
       text-decoration: none;
     }
@@ -453,15 +425,15 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding-top: 8.5rem;
-      padding-bottom: 5rem;
+      padding-top: 10rem;
+      padding-bottom: 6rem;
       position: relative;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3.5rem;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
       align-items: center;
     }
 
@@ -469,33 +441,33 @@
       font-size: 1.25rem;
       color: var(--text-secondary);
       margin-bottom: 2.5rem;
-      line-height: 1.6;
+      max-width: 640px;
     }
 
     .hero-ctas {
       display: flex;
       gap: 1.25rem;
       flex-wrap: wrap;
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.75rem;
-      padding: 0.6rem 1.2rem;
-      background: rgba(16, 185, 129, 0.1);
+      padding: 0.65rem 1.3rem;
+      background: rgba(16, 185, 129, 0.08);
       border: 1px solid rgba(16, 185, 129, 0.25);
       border-radius: 999px;
       font-size: 0.9rem;
       font-weight: 500;
       color: var(--accent-emerald);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
 
     .pulse-dot {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       background: var(--accent-emerald);
       border-radius: 50%;
       box-shadow: 0 0 12px var(--accent-emerald);
@@ -508,103 +480,105 @@
       100% { opacity: 0.4; transform: scale(0.9); }
     }
 
-    /* Live Dispatch Interactive Demo Box */
-    .dispatch-card {
+    /* Command Center Interactive Dashboard Widget */
+    .command-widget {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 24px;
       padding: 1.75rem;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
       position: relative;
     }
 
-    .dispatch-header {
+    .widget-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 1rem;
+      padding-bottom: 1.1rem;
       margin-bottom: 1.25rem;
     }
 
-    .dispatch-title {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent-cyan);
+    .widget-tabs {
       display: flex;
-      align-items: center;
       gap: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.35rem;
+      border-radius: 12px;
+      margin-bottom: 1.25rem;
     }
 
-    .live-feed {
+    [data-theme="light"] .widget-tabs {
+      background: rgba(226, 232, 240, 0.8);
+    }
+
+    .widget-tab-btn {
+      flex: 1;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .widget-tab-btn.active {
+      background: var(--accent-blue);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    .widget-content-box {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.25rem;
+      min-height: 180px;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      justify-content: space-between;
     }
 
-    .feed-item {
+    [data-theme="light"] .widget-content-box {
+      background: rgba(241, 245, 249, 0.9);
+    }
+
+    .widget-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.9rem 1.1rem;
-      background: rgba(0, 0, 0, 0.25);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      font-size: 0.9rem;
-      gap: 0.75rem;
+      font-size: 0.925rem;
     }
 
-    [data-theme="light"] .feed-item {
-      background: rgba(241, 245, 249, 0.8);
-    }
-
-    .feed-info {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-
-    .feed-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      flex-shrink: 0;
-    }
-
-    .feed-tag {
+    .widget-tag {
       font-family: var(--font-mono);
       font-size: 0.78rem;
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 6px;
       font-weight: 600;
-      white-space: nowrap;
     }
 
     /* Focus Ticker Strip */
     .focus-strip {
       background: var(--bg-secondary);
       border-y: 1px solid var(--border-color);
-      padding: 1.5rem 0;
+      padding: 1.6rem 0;
       overflow: hidden;
       display: flex;
       align-items: center;
-      position: relative;
     }
 
     .ticker-wrapper {
       display: flex;
-      gap: 4rem;
+      gap: 4.5rem;
       white-space: nowrap;
-      animation: ticker 30s linear infinite;
+      animation: ticker 32s linear infinite;
     }
 
     .ticker-item {
@@ -631,9 +605,9 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--card-radius);
-      padding: 2.5rem;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      padding: 2.75rem 2.25rem;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       transition: var(--transition);
       position: relative;
       overflow: hidden;
@@ -648,24 +622,24 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
     }
 
     .glass-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-hover);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 25px var(--accent-glow);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-glow);
     }
 
     [data-theme="light"] .glass-card:hover {
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08), 0 0 25px var(--accent-glow);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08), 0 0 30px var(--accent-glow);
     }
 
     .icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
       background: rgba(59, 130, 246, 0.1);
       border: 1px solid rgba(59, 130, 246, 0.25);
       display: flex;
@@ -698,13 +672,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.3rem 0.85rem;
+      padding: 0.35rem 0.9rem;
       border-radius: 999px;
       font-family: var(--font-mono);
       font-size: 0.78rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       margin-bottom: 1.25rem;
       width: fit-content;
     }
@@ -730,14 +704,14 @@
     /* Tech Stack Items */
     .tech-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.35rem;
     }
 
     .tech-item {
       display: flex;
       align-items: center;
-      gap: 1.1rem;
+      gap: 1.25rem;
       padding: 1.35rem 1.5rem;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -751,7 +725,7 @@
       border-color: var(--accent-blue);
       background: var(--bg-card-hover);
       transform: translateY(-3px);
-      box-shadow: 0 10px 25px var(--accent-glow);
+      box-shadow: 0 12px 30px var(--accent-glow);
     }
 
     /* Industry Pills */
@@ -763,7 +737,7 @@
     }
 
     .industry-pill {
-      padding: 0.85rem 1.75rem;
+      padding: 0.85rem 1.85rem;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 999px;
@@ -771,7 +745,7 @@
       font-weight: 500;
       color: var(--text-primary);
       transition: var(--transition);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
     }
 
     .industry-pill:hover {
@@ -780,7 +754,7 @@
       transform: translateY(-2px) scale(1.02);
     }
 
-    /* Roadmap Step */
+    /* Roadmap Grid */
     .roadmap-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -791,14 +765,14 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--card-radius);
-      padding: 2rem 1.5rem;
+      padding: 2.25rem 1.5rem;
       position: relative;
       transition: var(--transition);
     }
 
     .roadmap-step:hover {
       border-color: var(--accent-blue);
-      transform: translateY(-4px);
+      transform: translateY(-5px);
     }
 
     .roadmap-period {
@@ -806,29 +780,29 @@
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--accent-blue-light);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.65rem;
       display: block;
     }
 
-    /* Founders Profile */
+    /* Founder Badge */
     .founder-badge {
       display: flex;
       align-items: center;
       gap: 1rem;
-      padding: 1rem 1.25rem;
-      background: rgba(0, 0, 0, 0.2);
+      padding: 1.1rem 1.35rem;
+      background: rgba(0, 0, 0, 0.25);
       border: 1px solid var(--border-color);
-      border-radius: 14px;
+      border-radius: 16px;
       font-weight: 600;
     }
 
     [data-theme="light"] .founder-badge {
-      background: rgba(241, 245, 249, 0.8);
+      background: rgba(241, 245, 249, 0.85);
     }
 
     /* FAQ Accordion */
     .faq-list {
-      max-width: 820px;
+      max-width: 840px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -838,7 +812,7 @@
     .faq-item {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
       transition: var(--transition);
     }
@@ -849,9 +823,9 @@
     }
 
     .faq-summary {
-      padding: 1.5rem 1.75rem;
+      padding: 1.6rem 1.85rem;
       font-family: var(--font-heading);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
@@ -865,19 +839,19 @@
     }
 
     .faq-content {
-      padding: 0 1.75rem 1.5rem 1.75rem;
+      padding: 0 1.85rem 1.6rem 1.85rem;
       color: var(--text-secondary);
       line-height: 1.7;
     }
 
     /* Contact Card */
     .contact-card {
-      background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.9));
+      background: linear-gradient(135deg, rgba(15, 20, 32, 0.95), rgba(22, 30, 48, 0.9));
       border: 1px solid rgba(59, 130, 246, 0.35);
-      border-radius: 28px;
-      padding: 4.5rem 2.5rem;
+      border-radius: 32px;
+      padding: 5rem 3rem;
       text-align: center;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
       position: relative;
       overflow: hidden;
     }
@@ -885,7 +859,7 @@
     /* Footer */
     .footer {
       padding: 5rem 0 2.5rem 0;
-      background: #02040A;
+      background: #03050B;
       border-top: 1px solid var(--border-color);
     }
 
@@ -922,11 +896,15 @@
       transform: translateY(0);
     }
 
-    /* Comprehensive Mobile & Responsive Breakpoints */
+    /* Responsive Breakpoints */
     @media (max-width: 1024px) {
+      .site-header {
+        top: 0.75rem;
+        width: calc(100% - 2rem);
+      }
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 3.5rem;
       }
       .bento-col-4, .bento-col-6, .bento-col-8 {
         grid-column: span 12;
@@ -944,11 +922,11 @@
         display: flex;
       }
       .hero {
-        padding-top: 6.5rem;
-        padding-bottom: 3.5rem;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
       }
       .section {
-        padding: 4.5rem 0;
+        padding: 5rem 0;
       }
       .hero-ctas {
         flex-direction: column;
@@ -964,29 +942,22 @@
 
     @media (max-width: 480px) {
       .glass-card {
-        padding: 1.5rem;
+        padding: 1.75rem 1.25rem;
       }
       .contact-card {
-        padding: 3rem 1.25rem;
+        padding: 3.5rem 1.25rem;
       }
       .tech-grid {
         grid-template-columns: 1fr;
-      }
-      .feed-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .feed-tag {
-        align-self: flex-end;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient Grid and Glow Overlay -->
-  <div class="grid-pattern"></div>
-  <div class="aurora-glow"></div>
+  <!-- Ambient Glow & Blueprint Grid -->
+  <div class="spotlight"></div>
+  <div class="grid-lines"></div>
 
   <!-- Interactive Network Canvas -->
   <canvas id="hero-canvas"></canvas>
@@ -1003,7 +974,7 @@
         <span>Velaryn</span>
       </a>
       <button class="theme-toggle" id="close-menu-btn" aria-label="Close Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
@@ -1016,8 +987,8 @@
       <li><a href="#roadmap" class="mobile-link">Roadmap</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
-    <div style="margin-top: auto; display: flex; gap: 1rem; align-items: center; justify-content: space-between;">
-      <span style="font-size: 0.9rem; color: var(--text-secondary);">Toggle Appearance</span>
+    <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between;">
+      <span style="font-size: 0.95rem; color: var(--text-secondary);">Appearance Mode</span>
       <button class="theme-toggle" id="mobile-theme-btn" aria-label="Toggle Theme">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
@@ -1026,9 +997,9 @@
     </div>
   </div>
 
-  <!-- Sticky Navbar -->
+  <!-- Floating Sticky Navigation Bar -->
   <header class="site-header" id="navbar">
-    <div class="container nav-wrapper">
+    <div class="nav-wrapper">
       <a href="#home" class="brand-logo">
         <div class="brand-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5">
@@ -1045,7 +1016,6 @@
           <li><a href="#products">Products</a></li>
           <li><a href="#technology">Technology</a></li>
           <li><a href="#roadmap">Roadmap</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -1071,10 +1041,10 @@
       <div class="hero-grid">
         <div class="hero-copy reveal">
           <div class="section-label">
-            <span class="section-label-icon"></span>
+            <span class="section-label-dot"></span>
             Emerging Tech Company • Bengaluru
           </div>
-          <h1>Technology that powers <span class="gradient-text-emergency">faster, smarter</span> emergency response.</h1>
+          <h1>Technology that powers <span class="gradient-accent">faster, smarter</span> emergency response.</h1>
           <p class="hero-subtitle">
             Velaryn is building intelligent software for emergency response, healthcare coordination, and mission-critical operations — helping organizations make faster decisions when every second matters.
           </p>
@@ -1095,55 +1065,41 @@
           </div>
         </div>
 
-        <!-- Simulated Dispatch Telemetry Card -->
+        <!-- Command Center Interactive Dashboard Widget -->
         <div class="hero-visual reveal">
-          <div class="dispatch-card">
-            <div class="dispatch-header">
-              <div class="dispatch-title">
+          <div class="command-widget">
+            <div class="widget-header">
+              <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                LIVE DISPATCH SIGNAL (SIMULATION)
+                VELARYN SYSTEM COMMAND MESH
               </div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald); font-weight: 600;">ACTIVE TELEMETRY</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald); font-weight: 600;">● ONLINE</span>
             </div>
 
-            <div class="live-feed">
-              <div class="feed-item">
-                <div class="feed-info">
-                  <div class="feed-icon" style="background: #3B82F6;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                  </div>
-                  <div>
-                    <div style="font-weight: 600; font-size: 0.95rem;">Unit #104 Ambulance</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary);">En route to St. Jude ER</div>
-                  </div>
+            <!-- Tab Selectors -->
+            <div class="widget-tabs">
+              <button class="widget-tab-btn active" onclick="switchWidgetTab(0)">Ambulance Dispatch</button>
+              <button class="widget-tab-btn" onclick="switchWidgetTab(1)">Hospital Sync</button>
+              <button class="widget-tab-btn" onclick="switchWidgetTab(2)">AI Route Assist</button>
+            </div>
+
+            <!-- Active Tab Display Container -->
+            <div class="widget-content-box" id="widget-display">
+              <div class="widget-row">
+                <div>
+                  <div style="font-weight: 700; font-size: 1rem;" id="tab-title">Unit #104 Advanced Ambulance</div>
+                  <div style="font-size: 0.825rem; color: var(--text-secondary);" id="tab-subtitle">Live GPS Telemetry: Bengaluru East Zone</div>
                 </div>
-                <span class="feed-tag" style="background: rgba(59, 130, 246, 0.15); color: #60A5FA;">ETA 3.4 MIN</span>
+                <span class="widget-tag" id="tab-tag" style="background: rgba(59, 130, 246, 0.15); color: #60A5FA;">ETA 3.2 MIN</span>
               </div>
 
-              <div class="feed-item">
-                <div class="feed-info">
-                  <div class="feed-icon" style="background: #10B981;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                  </div>
-                  <div>
-                    <div style="font-weight: 600; font-size: 0.95rem;">ER Triage Handshake</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Patient Vitals Synced</div>
-                  </div>
-                </div>
-                <span class="feed-tag" style="background: rgba(16, 185, 129, 0.15); color: #34D399;">PRE-BED ALLOCATED</span>
+              <div style="margin: 1rem 0; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;" id="tab-desc">
+                Patient ECG & blood oxygen telemetry streaming in real time to St. Jude Emergency Room Intake Desk.
               </div>
 
-              <div class="feed-item">
-                <div class="feed-info">
-                  <div class="feed-icon" style="background: #06B6D4;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  </div>
-                  <div>
-                    <div style="font-weight: 600; font-size: 0.95rem;">AI Route Assist</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Traffic Corridor Clear</div>
-                  </div>
-                </div>
-                <span class="feed-tag" style="background: rgba(6, 182, 212, 0.15); color: #38BDF8;">OPTIMIZED</span>
+              <div class="widget-row" style="border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);" id="tab-meta">Signal Encryption: AES-256</span>
+                <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-emerald); font-weight: 600;" id="tab-status">Vitals Stable</span>
               </div>
             </div>
           </div>
@@ -1160,14 +1116,12 @@
       <div class="ticker-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Healthcare Technology</div>
       <div class="ticker-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> AI Systems</div>
       <div class="ticker-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Digital Infrastructure</div>
-      <!-- Duplicate set for seamless infinite scroll -->
+      <!-- Loop Items -->
       <div class="ticker-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Intelligent Platforms</div>
       <div class="ticker-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Operational Software</div>
       <div class="ticker-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Healthcare Technology</div>
     </div>
   </div>
-
-  <div class="section-divider"></div>
 
   <!-- About Section -->
   <section class="section" id="about">
@@ -1175,12 +1129,12 @@
       <div class="bento-grid">
         <div class="bento-col-6 reveal">
           <div class="section-label">
-            <span class="section-label-icon"></span>
+            <span class="section-label-dot"></span>
             About Velaryn
           </div>
           <h2>Building digital infrastructure for intelligent products.</h2>
           <p style="margin-bottom: 1.5rem;">
-            Velaryn is an Indian technology company focused on building intelligent digital systems that can scale across emergency services, healthcare coordination, and mission-critical operations.
+            Velaryn is an Indian technology company focused on building intelligent digital systems that scale across emergency response, healthcare coordination, and mission-critical operations.
           </p>
           <p>
             We develop robust software foundations around real-time telemetry, workflow automation, cloud infrastructure, and data-driven user experiences — enabling hospitals and emergency teams to work as one connected network.
@@ -1202,14 +1156,14 @@
     </div>
   </section>
 
-  <!-- Mission & Vision -->
+  <!-- Mission & Vision Bento Grid -->
   <section class="section">
     <div class="container">
       <div class="bento-grid">
         <div class="bento-col-6 reveal">
           <div class="glass-card">
             <div class="section-label">
-              <span class="section-label-icon"></span>
+              <span class="section-label-dot"></span>
               Mission
             </div>
             <h3>Build reliable technology that enables emergency responders and healthcare providers to act faster.</h3>
@@ -1222,7 +1176,7 @@
         <div class="bento-col-6 reveal">
           <div class="glass-card">
             <div class="section-label">
-              <span class="section-label-icon"></span>
+              <span class="section-label-dot"></span>
               Vision
             </div>
             <h3>Become a technology company known for intelligent, mission-critical platforms.</h3>
@@ -1235,14 +1189,12 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- What We Build / Capabilities -->
+  <!-- What We Build / Capabilities Bento Grid -->
   <section class="section" id="solutions">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">
-          <span class="section-label-icon"></span>
+          <span class="section-label-dot"></span>
           What We Build
         </div>
         <h2>Software foundations for mission-critical platforms.</h2>
@@ -1308,7 +1260,7 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">
-          <span class="section-label-icon"></span>
+          <span class="section-label-dot"></span>
           Products & Initiatives
         </div>
         <h2>A company first, products carefully phased.</h2>
@@ -1358,14 +1310,12 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
   <!-- Technology Focus -->
   <section class="section" id="technology">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">
-          <span class="section-label-icon"></span>
+          <span class="section-label-dot"></span>
           Technology Stack
         </div>
         <h2>Cloud-native, real-time, and AI-ready.</h2>
@@ -1391,7 +1341,7 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">
-          <span class="section-label-icon"></span>
+          <span class="section-label-dot"></span>
           Industries Served
         </div>
         <h2>Built where operational speed and software quality matter.</h2>
@@ -1408,14 +1358,12 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
   <!-- Phased Roadmap -->
   <section class="section" id="roadmap">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">
-          <span class="section-label-icon"></span>
+          <span class="section-label-dot"></span>
           Roadmap
         </div>
         <h2>A phased path from foundation to expansion.</h2>
@@ -1463,7 +1411,7 @@
         <div class="bento-col-6 reveal">
           <div class="glass-card">
             <div class="section-label">
-              <span class="section-label-icon"></span>
+              <span class="section-label-dot"></span>
               Founders
             </div>
             <h2>Building from Bengaluru.</h2>
@@ -1483,7 +1431,7 @@
         <div class="bento-col-6 reveal">
           <div class="glass-card">
             <div class="section-label">
-              <span class="section-label-icon"></span>
+              <span class="section-label-dot"></span>
               Careers
             </div>
             <h2>Hiring will open as we grow.</h2>
@@ -1499,7 +1447,7 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">
-          <span class="section-label-icon"></span>
+          <span class="section-label-dot"></span>
           FAQ
         </div>
         <h2>Clear answers about Velaryn.</h2>
@@ -1554,16 +1502,16 @@
     <div class="container">
       <div class="contact-card reveal">
         <div class="section-label" style="background: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.35);">
-          <span class="section-label-icon" style="background: var(--accent-blue);"></span>
+          <span class="section-label-dot" style="background: var(--accent-blue);"></span>
           Get In Touch
         </div>
-        <h2 style="font-size: 2.5rem; margin-bottom: 1.25rem;">Let’s talk about technology and early collaboration.</h2>
+        <h2 style="font-size: 2.75rem; margin-bottom: 1.25rem;">Let’s talk about technology and early collaboration.</h2>
         <p style="max-width: 620px; margin: 0 auto 2.5rem auto;">
           Whether you represent a hospital network, emergency dispatch organization, tech partner, or investor, we welcome early conversations.
         </p>
 
         <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-          <a href="mailto:contact@velaryn.in" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.2rem;">
+          <a href="mailto:contact@velaryn.in" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <span>contact@velaryn.in</span>
           </a>
@@ -1596,8 +1544,69 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Interactive Scripts -->
   <script>
+    // Interactive Command Mesh Tabs Logic
+    const tabData = [
+      {
+        title: "Unit #104 Advanced Ambulance",
+        subtitle: "Live GPS Telemetry: Bengaluru East Corridor",
+        tag: "ETA 3.2 MIN",
+        tagBg: "rgba(59, 130, 246, 0.15)",
+        tagColor: "#60A5FA",
+        desc: "Patient ECG & blood oxygen telemetry streaming live to St. Jude Emergency Room Intake Desk. Traffic signal clearance requested.",
+        meta: "Signal Encryption: AES-256 GCM",
+        status: "Vitals Synced & Stable",
+        statusColor: "var(--accent-emerald)"
+      },
+      {
+        title: "Hospital ER Intake Desk #02",
+        subtitle: "St. Jude Trauma Center • Bed Matrix",
+        tag: "BED RESERVED",
+        tagBg: "rgba(16, 185, 129, 0.15)",
+        tagColor: "#34D399",
+        desc: "Automated triage handshake complete. 2 Critical Care Beds & Trauma Bay #3 locked for incoming Unit #104 arrival.",
+        meta: "Hospital Sync Protocol: HL7 / FHIR",
+        status: "Triage Team Ready",
+        statusColor: "var(--accent-emerald)"
+      },
+      {
+        title: "AI Emergency Corridor Assist",
+        subtitle: "Bengaluru Smart City Traffic Grid",
+        tag: "GREEN WAVE ACTIVE",
+        tagBg: "rgba(6, 182, 212, 0.15)",
+        tagColor: "#38BDF8",
+        desc: "Smart traffic signal corridor activated along Outer Ring Road. Estimated time saved: 4.8 minutes over standard route.",
+        meta: "Model: Velaryn RouteAI v2.4",
+        status: "Corridor Clear",
+        statusColor: "var(--accent-cyan)"
+      }
+    ];
+
+    function switchWidgetTab(index) {
+      const btns = document.querySelectorAll('.widget-tab-btn');
+      btns.forEach((btn, idx) => {
+        if (idx === index) btn.classList.add('active');
+        else btn.classList.remove('active');
+      });
+
+      const data = tabData[index];
+      document.getElementById('tab-title').innerText = data.title;
+      document.getElementById('tab-subtitle').innerText = data.subtitle;
+      
+      const tag = document.getElementById('tab-tag');
+      tag.innerText = data.tag;
+      tag.style.background = data.tagBg;
+      tag.style.color = data.tagColor;
+
+      document.getElementById('tab-desc').innerText = data.desc;
+      document.getElementById('tab-meta').innerText = data.meta;
+      
+      const status = document.getElementById('tab-status');
+      status.innerText = data.status;
+      status.style.color = data.statusColor;
+    }
+
     // Theme Switcher Logic
     const themeBtn = document.getElementById('theme-btn');
     const mobileThemeBtn = document.getElementById('mobile-theme-btn');
@@ -1627,16 +1636,6 @@
     if (closeMenuBtn) closeMenuBtn.addEventListener('click', () => mobileOverlay.classList.remove('open'));
     mobileLinks.forEach(link => link.addEventListener('click', () => mobileOverlay.classList.remove('open')));
 
-    // Sticky Navbar Glass Effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
     // Scroll Reveal Observer
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1648,7 +1647,7 @@
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // Interactive Hero Network Canvas with Signals
+    // Interactive Hero Network Canvas
     const canvas = document.getElementById('hero-canvas');
     const ctx = canvas.getContext('2d');
 
@@ -1660,7 +1659,6 @@
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    // Mouse tracking for magnetic effect
     let mouse = { x: null, y: null };
     window.addEventListener('mousemove', (e) => {
       mouse.x = e.clientX;
@@ -1681,13 +1679,11 @@
       });
     }
 
-    // Radar pulse center
     let pulseRadius = 0;
 
     function drawNetwork() {
       ctx.clearRect(0, 0, width, height);
 
-      // Radar signal pulse
       pulseRadius += 0.8;
       if (pulseRadius > Math.max(width, height) * 0.6) pulseRadius = 0;
 
@@ -1697,7 +1693,6 @@
       ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      // Connect nodes
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -1718,17 +1713,13 @@
         }
       }
 
-      // Render and update nodes
       nodes.forEach(node => {
-        // Move
         node.x += node.vx;
         node.y += node.vy;
 
-        // Bounce
         if (node.x < 0 || node.x > width) node.vx *= -1;
         if (node.y < 0 || node.y > height) node.vy *= -1;
 
-        // Mouse magnetic reaction
         if (mouse.x && mouse.y) {
           const mdx = mouse.x - node.x;
           const mdy = mouse.y - node.y;
