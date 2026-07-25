@@ -9,19 +9,25 @@
   <meta name="author" content="Velaryn">
   <link rel="canonical" href="https://velaryn.in/">
 
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/svg+xml" href="public/assets/brand/velaryn-symbol.svg">
+  <link rel="alternate icon" href="public/assets/brand/velaryn-symbol.svg">
+  <link rel="apple-touch-icon" href="public/assets/brand/velaryn-logo-concept.png">
+  <link rel="mask-icon" href="public/assets/brand/velaryn-symbol.svg" color="#3B82F6">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://velaryn.in/">
   <meta property="og:title" content="Velaryn | Intelligent Emergency & Healthcare Technology">
   <meta property="og:description" content="Intelligent software for emergency response, healthcare coordination, and mission-critical operations. Helping organizations make faster decisions when every second matters.">
-  <meta property="og:image" content="https://velaryn.in/public/assets/brand/velaryn-field.svg">
+  <meta property="og:image" content="public/assets/brand/velaryn-field.svg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://velaryn.in/">
   <meta property="twitter:title" content="Velaryn | Intelligent Emergency & Healthcare Technology">
   <meta property="twitter:description" content="Intelligent software for emergency response, healthcare coordination, and mission-critical operations.">
-  <meta property="twitter:image" content="https://velaryn.in/public/assets/brand/velaryn-field.svg">
+  <meta property="twitter:image" content="public/assets/brand/velaryn-field.svg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,18 +165,6 @@
       font-size: 1.05rem;
     }
 
-    .text-gradient {
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    [data-theme="light"] .text-gradient {
-      background: linear-gradient(180deg, #0F172A 0%, #334155 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
     .gradient-accent {
       background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #34D399 100%);
       -webkit-background-clip: text;
@@ -265,14 +259,17 @@
       letter-spacing: -0.03em;
     }
 
-    .brand-icon {
+    .brand-img-logo {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.3));
+    }
+
+    .brand-icon-svg {
       width: 38px;
       height: 38px;
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
       border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
     }
 
@@ -966,11 +963,7 @@
   <div class="mobile-nav-overlay" id="mobile-overlay">
     <div class="mobile-nav-header">
       <a href="#home" class="brand-logo">
-        <div class="brand-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-        </div>
+        <img src="public/assets/brand/velaryn-symbol.svg" alt="Velaryn Emblem" class="brand-icon-svg">
         <span>Velaryn</span>
       </a>
       <button class="theme-toggle" id="close-menu-btn" aria-label="Close Menu">
@@ -1001,11 +994,7 @@
   <header class="site-header" id="navbar">
     <div class="nav-wrapper">
       <a href="#home" class="brand-logo">
-        <div class="brand-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-        </div>
+        <img src="public/assets/brand/velaryn-symbol.svg" alt="Velaryn Emblem" class="brand-icon-svg">
         <span>Velaryn</span>
       </a>
 
@@ -1088,13 +1077,13 @@
               <div class="widget-row">
                 <div>
                   <div style="font-weight: 700; font-size: 1rem;" id="tab-title">Unit #104 Advanced Ambulance</div>
-                  <div style="font-size: 0.825rem; color: var(--text-secondary);" id="tab-subtitle">Live GPS Telemetry: Bengaluru East Zone</div>
+                  <div style="font-size: 0.825rem; color: var(--text-secondary);" id="tab-subtitle">Live GPS Telemetry: Bengaluru East Corridor</div>
                 </div>
                 <span class="widget-tag" id="tab-tag" style="background: rgba(59, 130, 246, 0.15); color: #60A5FA;">ETA 3.2 MIN</span>
               </div>
 
               <div style="margin: 1rem 0; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;" id="tab-desc">
-                Patient ECG & blood oxygen telemetry streaming in real time to St. Jude Emergency Room Intake Desk.
+                Patient ECG & blood oxygen telemetry streaming live to St. Jude Emergency Room Intake Desk.
               </div>
 
               <div class="widget-row" style="border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
@@ -1525,11 +1514,7 @@
     <div class="container">
       <div class="footer-wrapper">
         <a href="#home" class="brand-logo">
-          <div class="brand-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-          </div>
+          <img src="public/assets/brand/velaryn-symbol.svg" alt="Velaryn Emblem" class="brand-icon-svg">
           <span>Velaryn</span>
         </a>
 
