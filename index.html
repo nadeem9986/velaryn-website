@@ -2093,11 +2093,19 @@
       const coreMesh = new THREE.Mesh(coreGeo, coreMat);
       wScene.add(coreMesh);
 
+      let spinSpeed = 0.015;
+      widgetCanvas.style.cursor = 'pointer';
+      widgetCanvas.addEventListener('click', () => {
+        spinSpeed = 0.08;
+        showToast('3D Telemetry Core Impulse Triggered!');
+      });
+
       function animateWidget3D() {
         requestAnimationFrame(animateWidget3D);
-        icoMesh.rotation.x += 0.01;
-        icoMesh.rotation.y += 0.015;
-        coreMesh.rotation.y -= 0.02;
+        spinSpeed += (0.015 - spinSpeed) * 0.05;
+        icoMesh.rotation.x += spinSpeed * 0.7;
+        icoMesh.rotation.y += spinSpeed;
+        coreMesh.rotation.y -= spinSpeed * 1.2;
         wRenderer.render(wScene, wCamera);
       }
       animateWidget3D();
