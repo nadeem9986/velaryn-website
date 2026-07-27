@@ -1967,9 +1967,10 @@
       const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
       camera.position.z = 240;
 
+      const isMobile = window.innerWidth < 768;
       const renderer = new THREE.WebGLRenderer({ canvas: bgCanvas, alpha: true, antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(isMobile ? 1.5 : Math.min(window.devicePixelRatio, 2));
 
       // 3D Particle Sphere (Emergency Response Mesh Globe)
       const particleCount = 2000;
