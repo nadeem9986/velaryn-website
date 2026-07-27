@@ -2055,7 +2055,8 @@
         targetY += (mouseY - targetY) * 0.04;
 
         camera.position.x = targetX;
-        camera.position.y = -targetY;
+        camera.position.y = -targetY + (window.scrollY * 0.03);
+        camera.position.z = 240 + Math.sin(Date.now() * 0.001) * 5;
         camera.lookAt(scene.position);
 
         renderer.render(scene, camera);
