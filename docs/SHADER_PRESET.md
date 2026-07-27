@@ -1,3 +1,6 @@
+# Shader Gradient Preset Reference
+
+```jsx
 <ShaderGradient
   animate="on"
   axesHelper="off"
@@ -42,3 +45,4 @@
   wireframe={false}
   zoomOut={true}
 />
+```
