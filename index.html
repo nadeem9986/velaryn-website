@@ -2027,9 +2027,34 @@
       }
       scene.add(ringGroup);
 
+      // 3D Emergency Signal Arcs
+      const arcGroup = new THREE.Group();
+      for (let a = 0; a < 5; a++) {
+        const curve = new THREE.QuadraticBezierCurve3(
+          new THREE.Vector3(-80 + a * 30, 40 - a * 15, 70),
+          new THREE.Vector3(0, 130 + a * 10, 90),
+          new THREE.Vector3(70 - a * 25, -50 + a * 20, 60)
+        );
+        const points = curve.getPoints(40);
+        const arcGeo = new THREE.BufferGeometry().setFromPoints(points);
+        const arcMat = new THREE.LineBasicMaterial({
+          color: a % 2 === 0 ? 0x3B82F6 : 0x06B6D4,
+          transparent: true,
+          opacity: 0.35 + a * 0.08
+        });
+        const arcLine = new THREE.Line(arcGeo, arcMat);
+        arcGroup.add(arcLine);
+      }
+      scene.add(arcGroup);
+
       // Interactive Mouse Follow Perspective Camera Shift
       let mouseX = 0, mouseY = 0;
       let targetX = 0, targetY = 0;
+      let isTabVisible = true;
+
+      document.addEventListener('visibilitychange', () => {
+        isTabVisible = !document.hidden;
+      });
 
       window.addEventListener('mousemove', (e) => {
         mouseX = (e.clientX - window.innerWidth / 2) * 0.08;
@@ -2045,11 +2070,15 @@
       function animate3D() {
         requestAnimationFrame(animate3D);
 
+        if (!isTabVisible) return;
+
         particleSphere.rotation.y += 0.0018;
         particleSphere.rotation.x += 0.0006;
 
         ringGroup.rotation.y -= 0.0012;
         ringGroup.rotation.z += 0.0008;
+
+        arcGroup.rotation.y += 0.0015;
 
         targetX += (mouseX - targetX) * 0.04;
         targetY += (mouseY - targetY) * 0.04;
