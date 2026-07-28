@@ -653,7 +653,6 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* 3D Glass Cards & Bento Grid */
     .glass-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -666,6 +665,11 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="light"] .glass-card {
+      box-shadow: 0 15px 40px rgba(218, 225, 235, 0.4), 0 1px 3px rgba(0, 0, 0, 0.03);
     }
 
     .glass-card::before {
@@ -678,14 +682,18 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
     }
 
+    [data-theme="light"] .glass-card::before {
+      background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.15), transparent);
+    }
+
     .glass-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-hover);
-      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5), 0 0 35px var(--accent-glow);
+      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.8), 0 0 35px var(--accent-glow);
     }
 
     [data-theme="light"] .glass-card:hover {
-      box-shadow: 0 25px 55px rgba(15, 23, 42, 0.12), 0 0 35px var(--accent-glow);
+      box-shadow: 0 25px 55px rgba(37, 99, 235, 0.14), 0 0 30px var(--accent-glow);
     }
 
     .icon-box {
