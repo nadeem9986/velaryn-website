@@ -17,24 +17,30 @@ This repository hosts the official landing page for **`velaryn.in`**.
 | **Bento Cards & Glass Panels** | 13 interactive cards |
 | **Technologies & Capabilities** | 9 core focus items |
 | **Tracked Page Sections** | `home, about, solutions, products, technology, roadmap, faq, contact` |
-| **Last Auto-Synced** | `2026-07-28 11:19:08` |
+| **Last Auto-Synced** | `2026-07-28 11:27:12` |
 <!-- END_AUTO_UPDATE -->
 
 ---
 
-## 🚀 Single-File HTML Architecture
+## 🚀 Instant GitHub Push & Continuous Contribution Policy
 
-The website is engineered as a clean, self-contained `index.html` file containing:
-- **Design System**: Dark theme (`#05070B`), glassmorphic backdrop filters, aurora mesh gradients, Space Grotesk & Inter typography.
-- **Zero Heavy Dependencies**: Native HTML5 Canvas WebGL particle network animation representing real-time emergency dispatch signals.
-- **Interactive UI**: Sticky navbar with backdrop blur, dark/light mode toggle (`localStorage` persisted), smooth scrolling, mobile drawer, and FAQ accordions.
-- **SEO & Social Metadata**: Full OpenGraph, Twitter card, canonical tags, and structured accessibility standards.
+This repository adheres to an **Instant Deployment & Continuous Contribution Workflow**:
+- **Real-Time Git Commits**: Every modification, bug fix, visual polish, line-count change, or structural enhancement is committed and pushed **instantly** to GitHub (`https://github.com/nadeem9986/velaryn-website.git`).
+- **Automated Metric Sync**: `python scripts/update_readme.py` runs before each commit to update line counts, file sizes, and active component totals in `README.md`.
+- **Granular Contribution History**: Even minor code adjustments trigger isolated, semantic commits (`feat`, `fix`, `style`, `perf`, `docs`) to build a transparent contribution graph.
+
+---
+
+## 🎨 Dual Theme System (Vanta Black & Pearl White)
+
+- **Vanta Black Dark Mode (`#010102`)**: Pitch-black background with high-contrast electric blue (`#3B82F6`) and cyan (`#06B6D4`) 3D particle nodes and specular glass reflections.
+- **Pearl White Light Mode (`#FDFDFE`)**: Luxury satin white background with subtle pearlescent glass cards, soft drop-shadows, and crisp dark typography (`#0B0F19`).
 
 ---
 
 ## 🛠️ Maintenance & Self-Updating README
 
-To update the README automatically after editing `index.html`, run:
+To update the README metrics automatically after editing `index.html`, run:
 
 ```bash
 python scripts/update_readme.py
@@ -45,14 +51,25 @@ python scripts/update_readme.py
 ## 📁 Repository Structure
 
 ```
-valeryn-website/
-├── index.html              # Complete self-contained landing page
-├── README.md               # Self-updating project documentation
-├── scripts/
-│   └── update_readme.py    # Automatic metrics sync script
-├── docs/                   # Product & Technical Requirement Documents (PRD, TRD)
-└── public/
-    └── assets/             # Vector brand assets and graphics
+velaryn-website/
+├── index.html                  # Standalone 3D WebGL Web Application
+├── README.md                   # Self-Updating Documentation & Instant Push Policy
+├── .gitignore                  # Clean Git Exclusions
+├── docs/                       # Specifications & Architecture
+│   ├── PRD.md                  # Product Requirements Document
+│   ├── TRD.md                  # Technical Requirements Document
+│   ├── IMPLEMENTATION_PLAN.md  # Engineering Roadmap & Phasing
+│   ├── ARCHITECTURE.md         # Technical & Directory Architecture
+│   ├── SHADER_PRESET.md        # Shader Preset Reference
+│   └── diagrams/               # Architecture & Flow Diagrams (Mermaid)
+├── public/                     # Static Assets & Vector Graphics
+│   └── assets/
+│       └── brand/
+│         ├── velaryn-symbol.svg       # Vector Brand Emblem
+│         ├── velaryn-logo-concept.png # High-res Brand Concept
+│         └── velaryn-field.svg        # Vector Background Field
+└── scripts/                    # Automation Tools
+    └── update_readme.py        # Automated Metrics & README Generator
 ```
 
 ---
