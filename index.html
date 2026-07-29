@@ -1809,6 +1809,25 @@
       });
     }
 
+    // Global Keyboard Accessibility Shortcuts (/ search focus & Esc close drawer)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+        const searchInput = document.getElementById('faq-search');
+        if (searchInput) {
+          e.preventDefault();
+          searchInput.focus();
+          searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+      if (e.key === 'Escape') {
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        if (mobileOverlay && mobileOverlay.classList.contains('open')) {
+          mobileOverlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      }
+    });
+
     // Back to Top Button Observer
     const backToTopBtn = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
