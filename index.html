@@ -2089,6 +2089,17 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(isMobile ? 1.5 : Math.min(window.devicePixelRatio, 2));
 
+      // GPU Context Loss Protection
+      bgCanvas.addEventListener('webglcontextlost', (e) => {
+        e.preventDefault();
+        isTabVisible = false;
+      }, false);
+
+      bgCanvas.addEventListener('webglcontextrestored', () => {
+        isTabVisible = true;
+        animate3D();
+      }, false);
+
       // 3D Particle Sphere (Emergency Response Mesh Globe)
       const particleCount = 2000;
       const geometry = new THREE.BufferGeometry();
