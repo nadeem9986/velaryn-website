@@ -34,26 +34,51 @@
 
   <!-- Structured Data JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Velaryn",
-    "url": "https://velaryn.in/",
-    "logo": "https://velaryn.in/public/assets/brand/velaryn-symbol.svg",
-    "email": "contact@velaryn.in",
-    "foundingDate": "2026",
-    "founders": [
-      { "@type": "Person", "name": "Yasar Ameen H N" },
-      { "@type": "Person", "name": "Nadeem" }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "addressCountry": "India"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Velaryn",
+      "url": "https://velaryn.in/",
+      "logo": "https://velaryn.in/public/assets/brand/velaryn-symbol.svg",
+      "email": "contact@velaryn.in",
+      "foundingDate": "2026",
+      "founders": [
+        { "@type": "Person", "name": "Yasar Ameen H N" },
+        { "@type": "Person", "name": "Nadeem" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "India"
+      },
+      "description": "Building intelligent digital software for emergency response, healthcare coordination, and mission-critical operations."
     },
-    "description": "Building intelligent digital software for emergency response, healthcare coordination, and mission-critical operations."
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Velaryn",
+      "url": "https://velaryn.in/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Velaryn"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://velaryn.in/#home" },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://velaryn.in/#about" },
+        { "@type": "ListItem", "position": 3, "name": "What We Build", "item": "https://velaryn.in/#solutions" },
+        { "@type": "ListItem", "position": 4, "name": "Products", "item": "https://velaryn.in/#products" },
+        { "@type": "ListItem", "position": 5, "name": "Technology", "item": "https://velaryn.in/#technology" },
+        { "@type": "ListItem", "position": 6, "name": "Roadmap", "item": "https://velaryn.in/#roadmap" },
+        { "@type": "ListItem", "position": 7, "name": "Contact", "item": "https://velaryn.in/#contact" }
+      ]
+    }
+  ]
   </script>
 
   <!-- Fonts -->
