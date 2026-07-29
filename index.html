@@ -918,6 +918,27 @@
       pointer-events: none;
     }
 
+    .faq-tag-btn {
+      padding: 0.45rem 1.15rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+    }
+
+    .faq-tag-btn.active, .faq-tag-btn:hover {
+      background: var(--accent-blue);
+      color: #FFFFFF;
+      border-color: var(--accent-blue);
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
     /* FAQ Accordion */
     .faq-list {
       max-width: 840px;
@@ -1678,6 +1699,14 @@
         <input type="text" id="faq-search" class="faq-search-input" placeholder="Type to filter FAQ questions (e.g. Rescue Call, Partnership, Bengaluru)..." aria-label="Search FAQ questions">
       </div>
 
+      <!-- FAQ Category Filter Tags -->
+      <div class="faq-tags-wrapper reveal" style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+        <button class="faq-tag-btn active" onclick="filterFAQ('all', this)">All Questions</button>
+        <button class="faq-tag-btn" onclick="filterFAQ('rescue', this)">Rescue Call</button>
+        <button class="faq-tag-btn" onclick="filterFAQ('partnership', this)">Partnerships</button>
+        <button class="faq-tag-btn" onclick="filterFAQ('bengaluru', this)">Location & Founders</button>
+      </div>
+
       <div class="faq-list reveal" id="faq-container">
         <details class="faq-item">
           <summary class="faq-summary">
@@ -1811,6 +1840,22 @@
             item.style.display = 'none';
           }
         });
+      });
+    }
+
+    function filterFAQ(category, btn) {
+      const tagBtns = document.querySelectorAll('.faq-tag-btn');
+      tagBtns.forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const faqItems = document.querySelectorAll('#faq-container .faq-item');
+      faqItems.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        if (category === 'all' || text.includes(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
       });
     }
 
