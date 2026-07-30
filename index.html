@@ -2285,6 +2285,12 @@
         renderer.render(scene, camera);
       }
 
+      window.addEventListener('beforeunload', () => {
+        geometry.dispose();
+        if (particleMaterial) particleMaterial.dispose();
+        renderer.dispose();
+      });
+
       animate3D();
     }
 
