@@ -2089,6 +2089,21 @@
       document.body.style.overflow = '';
     }));
 
+    // Touch Swipe Gesture to Dismiss Mobile Overlay
+    let touchStartY = 0;
+    if (mobileOverlay) {
+      mobileOverlay.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+      mobileOverlay.addEventListener('touchmove', (e) => {
+        const touchY = e.touches[0].clientY;
+        if (touchY - touchStartY > 80) {
+          mobileOverlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      }, { passive: true });
+    }
+
     // Scroll Reveal Observer
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
