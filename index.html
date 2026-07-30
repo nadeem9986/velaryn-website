@@ -769,6 +769,15 @@
       width: fit-content;
     }
 
+    .badge-live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 8px currentColor;
+      animation: pulse 2s infinite;
+    }
+
     .badge-dev {
       background: rgba(59, 130, 246, 0.12);
       color: var(--accent-blue-light);
@@ -1512,7 +1521,7 @@
       <div class="bento-grid">
         <div class="bento-col-4 reveal">
           <div class="glass-card tilt-element">
-            <span class="status-badge badge-dev">In Development</span>
+            <span class="status-badge badge-dev"><span class="badge-live-dot"></span> In Development</span>
             <h3>Rescue Call</h3>
             <p style="margin-bottom: 1.75rem;">
               An early-stage emergency response initiative focused on ambulance coordination, pre-hospital vitals transmission, and police alert dispatching.
@@ -1525,7 +1534,7 @@
 
         <div class="bento-col-4 reveal">
           <div class="glass-card tilt-element">
-            <span class="status-badge badge-future">Future Direction</span>
+            <span class="status-badge badge-future"><span class="badge-live-dot"></span> Future Direction</span>
             <h3>Healthcare Systems</h3>
             <p style="margin-bottom: 1.75rem;">
               Digital healthcare concepts simplifying emergency room capacity tracking, triage synchronization, and inter-hospital patient handoffs.
@@ -1538,7 +1547,7 @@
 
         <div class="bento-col-4 reveal">
           <div class="glass-card tilt-element">
-            <span class="status-badge badge-research">Research & Development</span>
+            <span class="status-badge badge-research"><span class="badge-live-dot"></span> Research & Development</span>
             <h3>Operational AI Systems</h3>
             <p style="margin-bottom: 1.75rem;">
               Intelligent machine learning models and automated decision-assistance layers for future mission-critical public safety platforms.
