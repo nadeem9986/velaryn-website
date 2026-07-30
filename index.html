@@ -990,6 +990,12 @@
     .faq-item[open] {
       border-color: var(--accent-blue);
       background: var(--bg-card-hover);
+      box-shadow: 0 10px 30px var(--accent-glow);
+    }
+
+    .faq-item[open] .faq-summary svg {
+      transform: rotate(180deg);
+      color: var(--accent-blue);
     }
 
     .faq-summary {
