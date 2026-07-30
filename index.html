@@ -2202,9 +2202,16 @@
 
       window.addEventListener('mouseup', () => { isDragging = false; });
 
+      const spotlightElem = document.querySelector('.spotlight');
       window.addEventListener('mousemove', (e) => {
         mouseX = (e.clientX - window.innerWidth / 2) * 0.08;
         mouseY = (e.clientY - window.innerHeight / 2) * 0.08;
+
+        if (spotlightElem) {
+          const spotX = (e.clientX / window.innerWidth) * 100;
+          const spotY = (e.clientY / window.innerHeight) * 50;
+          spotlightElem.style.background = `radial-gradient(ellipse 65% 55% at ${spotX}% ${spotY}%, rgba(59, 130, 246, 0.28) 0%, rgba(6, 182, 212, 0.16) 45%, rgba(16, 185, 129, 0.04) 80%, transparent 100%)`;
+        }
 
         if (isDragging) {
           const deltaX = e.clientX - previousMousePosition.x;
