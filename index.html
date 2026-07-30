@@ -1926,6 +1926,10 @@
           document.body.style.overflow = '';
         }
       }
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'c') {
+        e.preventDefault();
+        copyEmail();
+      }
     });
 
     // Throttled Scroll Listener using requestAnimationFrame
