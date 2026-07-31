@@ -2343,21 +2343,26 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
       });
 
+      const clock = new THREE.Clock();
+
       function animate3D() {
         requestAnimationFrame(animate3D);
 
         if (!isTabVisible) return;
 
+        const delta = Math.min(clock.getDelta(), 0.1);
+        const timeScale = delta * 60;
+
         dragVelocity.x *= 0.95;
         dragVelocity.y *= 0.95;
 
-        particleSphere.rotation.y += 0.0018 + dragVelocity.x;
-        particleSphere.rotation.x += 0.0006 + dragVelocity.y;
+        particleSphere.rotation.y += (0.0018 + dragVelocity.x) * timeScale;
+        particleSphere.rotation.x += (0.0006 + dragVelocity.y) * timeScale;
 
-        ringGroup.rotation.y -= 0.0012;
-        ringGroup.rotation.z += 0.0008;
+        ringGroup.rotation.y -= 0.0012 * timeScale;
+        ringGroup.rotation.z += 0.0008 * timeScale;
 
-        arcGroup.rotation.y += 0.0015 + dragVelocity.x * 0.5;
+        arcGroup.rotation.y += (0.0015 + dragVelocity.x * 0.5) * timeScale;
 
         targetX += (mouseX - targetX) * 0.04;
         targetY += (mouseY - targetY) * 0.04;
