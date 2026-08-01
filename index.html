@@ -1965,6 +1965,18 @@
       });
     }
 
+    // FAQ Summary Keyboard Enter/Space Toggle Accessibility
+    document.querySelectorAll('.faq-summary').forEach(summary => {
+      summary.setAttribute('tabindex', '0');
+      summary.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const details = summary.parentElement;
+          if (details) details.open = !details.open;
+        }
+      });
+    });
+
     // Global Keyboard Accessibility Shortcuts (/ search focus & Esc close drawer)
     window.addEventListener('keydown', (e) => {
       if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
