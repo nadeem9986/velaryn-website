@@ -2368,6 +2368,9 @@
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        if (particleMaterial) {
+          particleMaterial.size = window.innerWidth < 768 ? 1.8 : 2.3;
+        }
       });
 
       const clock = new THREE.Clock();
