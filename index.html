@@ -1197,6 +1197,17 @@
       z-index: 2;
     }
 
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-blue-light), transparent);
+      opacity: 0.5;
+    }
+
     [data-theme="light"] .footer {
       background: #F4F6F9;
     }
