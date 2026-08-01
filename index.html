@@ -1084,6 +1084,12 @@
       box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
       position: relative;
       overflow: hidden;
+      transition: border-color 0.3s ease, box-shadow 0.35s ease;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent-blue);
+      box-shadow: 0 35px 80px rgba(59, 130, 246, 0.25);
     }
 
     [data-theme="light"] .contact-card {
