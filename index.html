@@ -884,7 +884,19 @@
       border-radius: var(--card-radius);
       padding: 2.25rem 1.5rem;
       position: relative;
+      overflow: hidden;
       transition: transform 0.15s ease-out, border-color 0.3s;
+    }
+
+    .roadmap-step::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-blue-light), transparent);
+      opacity: 0.7;
     }
 
     .roadmap-step:hover {
