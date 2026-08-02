@@ -2356,7 +2356,9 @@
         colors[i * 3 + 2] = mixColor.b;
       }
 
-      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      const posAttr = new THREE.BufferAttribute(positions, 3);
+      posAttr.setUsage(THREE.DynamicDrawUsage);
+      geometry.setAttribute('position', posAttr);
       geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
       particleMaterial = new THREE.PointsMaterial({
