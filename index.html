@@ -771,6 +771,22 @@
       background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.15), transparent);
     }
 
+    .glass-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-blue-light), transparent);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .glass-card:hover::after {
+      opacity: 0.7;
+    }
+
     .glass-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-hover);
