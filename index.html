@@ -188,6 +188,12 @@
       pointer-events: none;
       z-index: 0;
       opacity: 0.45;
+      animation: gridPulse 10s ease-in-out infinite;
+    }
+
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.55; }
     }
 
     /* 3D WebGL Background Canvas */
