@@ -418,7 +418,9 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--accent-blue), #1D4ED8);
       color: #FFFFFF;
-      box-shadow: 0 4px 25px var(--accent-glow);
+      box-shadow: 0 4px 25px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
     }
 
     .btn-primary:hover {
