@@ -2364,7 +2364,7 @@
       camera.position.z = 240;
 
       const isMobile = window.innerWidth < 768;
-      const renderer = new THREE.WebGLRenderer({ canvas: bgCanvas, alpha: true, antialias: true });
+      const renderer = new THREE.WebGLRenderer({ canvas: bgCanvas, alpha: true, antialias: true, powerPreference: "high-performance" });
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(isMobile ? 1.5 : Math.min(window.devicePixelRatio, 2));
 
